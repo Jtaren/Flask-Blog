@@ -1,1 +1,1 @@
-Learning to code using Flask Framework
+Learning to code using Flask Micro Framework
