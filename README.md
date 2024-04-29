@@ -1,1 +1,1 @@
-Learning to code using Flask Micro Framework
+Learning to code using Flask MicroFramework for python Web Applications
