@@ -1,10 +1,11 @@
 
 from flask import Flask, render_template, url_for
 from forms import RegistrationForm, LoginForm
-
+import os
 
 app = Flask(__name__)
 
+SECRET_KEY = os.urandom(32)
 app.config['SECRET_kEY'] = ''
 
 posts = [
