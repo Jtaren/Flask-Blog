@@ -5,8 +5,8 @@ from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 
-# app.config['SECRET_kEY'] = 'c69508a98c7428c7c6b3be18b14956e9'
-
+app.config['SECRET_kEY'] = 'c69508a98c7428c7c6b3be18b14956e9'
+csrf = CSRFProtect(app)
 
 posts = [
     {
