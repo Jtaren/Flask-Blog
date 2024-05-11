@@ -1,10 +1,12 @@
 
 from flask import Flask, render_template, url_for
 from forms import RegistrationForm, LoginForm
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 
-app.config['SECRET_kEY'] = '29587d70b2dcd3fab719378a64b2ba44'
+app.config['SECRET_kEY'] = 'c69508a98c7428c7c6b3be18b14956e9'
+
 
 posts = [
     {
