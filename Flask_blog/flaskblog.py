@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 SECRET_KEY = os.urandom(32)
-app.config['SECRET_kEY'] = ''
+app.config['SECRET_kEY'] = '96b9dfdd948e108fd07bee8247e1516b'
 
 posts = [
     {
