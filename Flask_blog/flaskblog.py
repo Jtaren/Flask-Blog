@@ -1,12 +1,12 @@
 
 from flask import Flask, render_template, url_for
 from forms import RegistrationForm, LoginForm
-import os
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 
-SECRET_KEY = os.urandom(32)
 app.config['SECRET_kEY'] = '96b9dfdd948e108fd07bee8247e1516b'
+csrf = CSRFProtect(app)
 
 posts = [
     {
@@ -33,11 +33,13 @@ def about():
     return render_template('about.html', title='About')
 
 @app.route("/register")
+@csrf.exempt
 def register():
     form = RegistrationForm()
     return render_template('register.html', title='Register', form=form)
 
 @app.route("/login")
+@csrf.exempt
 def login():
     form = LoginForm()
     return render_template('login.html', title='Login', form=form)
